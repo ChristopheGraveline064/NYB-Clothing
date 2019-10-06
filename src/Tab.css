@@ -1,0 +1,30 @@
+.tab-list {
+  text-align: center;
+  background-color: black;
+  padding: 0px;
+  font-family: Karla,Arial,sans-serif;
+}
+
+.tab-list-item {
+  display: inline-block;
+  font-size: 35px;
+  color: white;
+  width: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: transform .3s; /* Animation */
+  cursor: pointer;
+}
+
+.tab-list div:hover {
+  text-decoration: underline;
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05);
+}
+
+.tab-list-active {
+  text-decoration: underline;
+  color: black;
+  background-color: white;
+}

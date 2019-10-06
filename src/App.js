@@ -41,12 +41,13 @@ class App extends Component {
       language: app_language,
       lang: (typeof app_language == "string") ? Lang[app_language] : Lang['english'],
       clothingType: [
-                      {id:'Dresses',display:false},
-                      {id:'Coats & Jackets',display:false},
-                      {id:'Pants',display:false},
-                      {id:'Shirts',display:false},
-                      {id:'Cloaks',display:false}
+                      {id:'Dresses',display:true},
+                      {id:'Coats & Jackets',display:true},
+                      {id:'Pants',display:true},
+                      {id:'Shirts',display:true},
+                      {id:'Cloaks',display:true}
                     ],
+
     }
 
     instagramAPI.userSelf().then(function(result) {
@@ -114,7 +115,7 @@ class App extends Component {
               <Product clothingType = {clothingType}/>
             </div>
             <div dropdown={[]} label={lang.sell}>
-              No content
+              {null}
             </div>
             <div dropdown={[]} label={lang.inspiration}>
               <Inspiration/>

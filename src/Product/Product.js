@@ -30,33 +30,38 @@ class Product extends Component {
 
     } = this;
 
+    let list_of_clothing_type_to_display = []
+    for (var i =0 ;i < clothingType.length;i++){
+      if (clothingType[i]['display']){
+        list_of_clothing_type_to_display.push(clothingType[i]['id'])
+      }
+    }
+
     return (
       <div>
         <div>
         {
-          clothing_list.map((clothing) => {
-            //for (var i = 0;i<clothingType.lenght;i++){
-              if (clothing.cathegory ) {
+          clothing_list.map((clothing) =>{
+
+              if (list_of_clothing_type_to_display.includes(clothing.cathegory)) {
                 return (
                     <div>
-                    <Clothing
-                    /*placeholder arguments*/
-                    imgSource={clothing.img}
-                    buyLink={'https://www.etsy.com/ca/shop/NYBclothing'}
-                    price={'10$'}
-                    category={'t-shirt'}
-                    />
+                      <Clothing
+                      imgSource={clothing.img}
+                      buyLink={clothing.link}
+                      price={clothing.price}
+                      category={clothing.cathegory}
+                      />
                     </div>
 
                 );
               } else {
                 return undefined;
               }
-            //}
+            })
 
 
           })
-        }
         </div>
 
       </div>

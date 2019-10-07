@@ -60,6 +60,8 @@ class App extends Component {
 
   }
 
+  /*Map clothing type to dropdown */
+  //TODO to function could be generic for otheir dropdown item
   onClickDropdownItem = (i) => {
 
     this.setState(state => {

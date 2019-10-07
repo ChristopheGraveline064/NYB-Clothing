@@ -10,6 +10,7 @@ class Tab extends Component {
     onClickDropdown: PropTypes.func.isRequired,
   };
 
+  /*on click of element of dropdown menu*/
   onClick = () => {
     const { label, onClick } = this.props;
     onClick(label);

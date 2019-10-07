@@ -30,6 +30,7 @@ class Product extends Component {
 
     } = this;
 
+    /*list use to filter all the product based on their type*/
     let list_of_clothing_type_to_display = []
     for (var i =0 ;i < clothingType.length;i++){
       if (clothingType[i]['display']){

@@ -45,8 +45,8 @@ class Product extends Component {
 
               if (list_of_clothing_type_to_display.includes(clothing.cathegory)) {
                 return (
-                    <div>
-                      <Clothing
+                    <div key = {clothing.id.toString()}>
+                      <Clothing key = {clothing.id.toString()}
                       imgSource={clothing.img}
                       buyLink={clothing.link}
                       price={clothing.price}

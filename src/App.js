@@ -106,7 +106,7 @@ class App extends Component {
               <div align="right">{
                 clothingType.map((clothes) => {
                   if (!clothes.display) return undefined;
-                  return (<div onClick={() => this.onClickDropdownItem(clothes.id)} className='tag'>
+                  return (<div key={clothes.id} onClick={() => this.onClickDropdownItem(clothes.id)} className='tag'>
                             {clothes.id}
                             <a className='closeBtn'>✕</a>
                           </div>);

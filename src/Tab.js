@@ -46,7 +46,7 @@ class Tab extends Component {
         <div className="dropdown-content">
           {
             dropdown.map((dropdownItem) => {
-              return (<div onClick={() => this.onClickDropdown(dropdownItem.id)}>
+              return (<div key={dropdownItem.id} onClick={() => this.onClickDropdown(dropdownItem.id)}>
                 {dropdownItem.id}
                 <a className='addBtn'>+</a>
               </div>);
